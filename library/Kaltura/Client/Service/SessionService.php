@@ -133,4 +133,17 @@ class SessionService extends \Kaltura\Client\ServiceBase
 		$this->client->validateObjectType($resultObject, "\\Kaltura\\Client\\Type\\StartWidgetSessionResponse");
 		return $resultObject;
 	}
+
+	function get($ks=null)
+	{
+		$kparams = array();
+		$this->client->addParam($kparams, "ks", $ks);
+		$this->client->queueServiceActionCall("session", "get", $kparams);
+		if ($this->client->isMultiRequest())
+			return $this->client->getMultiRequestResult();;
+		$resultObject = $this->client->doQueue();
+		$this->client->throwExceptionIfError($resultObject);
+		$this->client->validateObjectType($resultObject, "\\Kaltura\\Client\\Type\\SessionInfo");
+		return $resultObject;
+	}
 }

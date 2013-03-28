@@ -354,6 +354,7 @@ class TypeMap
 		'KalturaReportInputFilter' => 'Kaltura\Client\Type\ReportInputFilter',
 		'KalturaSearchCondition' => 'Kaltura\Client\Type\SearchCondition',
 		'KalturaSearchOperator' => 'Kaltura\Client\Type\SearchOperator',
+		'KalturaSessionInfo' => 'Kaltura\Client\Type\SessionInfo',
 		'KalturaSessionRestriction' => 'Kaltura\Client\Type\SessionRestriction',
 		'KalturaShortLinkBaseFilter' => 'Kaltura\Client\Plugin\ShortLink\Type\ShortLinkBaseFilter',
 		'KalturaSiteRestriction' => 'Kaltura\Client\Type\SiteRestriction',
